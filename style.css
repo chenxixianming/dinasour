@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    position: relative;
+}
+
+.score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #535353;
+}
+
+#game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 2px solid #535353;
+    position: relative;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+#dino {
+    width: 40px;
+    height: 43px;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    background: #535353;
+}
+
+#dino::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #535353;
+    top: -15px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+#dino::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    top: -10px;
+    left: 20px;
+    border-radius: 50%;
+}
+
+#cactus {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    background: #535353;
+}
+
+#cactus::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background: #535353;
+    left: -8px;
+    top: 5px;
+}
+
+#cactus::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background: #535353;
+    right: -8px;
+    top: 5px;
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-over h2 {
+    color: #535353;
+    margin-bottom: 10px;
+}
+
+.game-over p {
+    color: #888;
+}
+
+.show {
+    display: block !important;
+}
